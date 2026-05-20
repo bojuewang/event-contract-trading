@@ -88,5 +88,17 @@
     "name": "实时信号刷新 Worker 与告警日志",
     "script": "scripts/phases/14_live_signal_monitor_worker.sh",
     "description": "后台周期性刷新 live_hedge_signals 报告，把纸面交易候选写入 alerts JSONL，验证文件持续更新。"
+  },
+  {
+    "id": "15_api_dashboard_signal_integration",
+    "name": "API 与 Dashboard 信号展示联通",
+    "script": "scripts/phases/15_api_dashboard_signal_integration.sh",
+    "description": "新增 /signals/live 与 /alerts/recent，只读展示实时信号和 alert，并重启验证 dashboard 可达。"
+  },
+  {
+    "id": "16_realtime_risk_guardrails",
+    "name": "实时风控状态与安全门",
+    "script": "scripts/phases/16_realtime_risk_guardrails.sh",
+    "description": "检查 worker、数据新鲜度、信号新鲜度、API/dashboard 状态，生成 risk_status 并接入 /risk/status 和 dashboard。"
   }
 ]

@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 from sqlalchemy import create_engine, text
@@ -11,6 +14,21 @@ st.set_page_config(page_title="实时事件概率预测", layout="wide")
 st.title("实时事件概率预测与对冲信号")
 
 settings = get_settings()
+risk_path = Path("data/reports/risk_status.json")
+
+if risk_path.exists():
+    risk = json.loads(risk_path.read_text(encoding="utf-8"))
+    risk_status = risk.get("status", "unknown")
+    if risk_status == "ok":
+        st.success("风控状态：OK。当前仅启用 paper-trade 信号展示。")
+    elif risk_status == "warn":
+        st.warning("风控状态：WARN。信号可观察，但需要检查警告项。")
+    else:
+        st.error("风控状态：BLOCKED。暂停使用信号。")
+    with st.expander("风控详情", expanded=risk_status != "ok"):
+        st.json(risk)
+else:
+    st.warning("尚未生成 risk_status.json。运行 Phase 16 后会显示风控状态。")
 
 with st.sidebar:
     st.header("对冲参数")
@@ -36,6 +54,53 @@ sim = simulate_threshold_hit_probability(
 )
 st.metric("第二腿触达目标价概率", f"{sim['hit_probability']:.2%}")
 st.json(sim)
+
+st.subheader("实时对冲信号")
+signals_path = Path("data/reports/live_hedge_signals.json")
+alerts_path = Path("data/alerts/hedge_signal_alerts.jsonl")
+
+if signals_path.exists():
+    report = json.loads(signals_path.read_text(encoding="utf-8"))
+    signals = report.get("signals", [])
+    candidates = [item for item in signals if item.get("signal") == "paper_trade_candidate"]
+    watches = [item for item in signals if item.get("signal") == "watch"]
+    rejects = [item for item in signals if item.get("signal") == "reject"]
+    s1, s2, s3, s4 = st.columns(4)
+    s1.metric("信号更新时间", report.get("generated_at", "n/a"))
+    s2.metric("候选", len(candidates))
+    s3.metric("观察", len(watches))
+    s4.metric("拒绝", len(rejects))
+    if signals:
+        df_signals = pd.DataFrame(signals)
+        df_signals["reasons"] = df_signals["reasons"].apply(lambda items: ", ".join(items) if isinstance(items, list) else items)
+        cols = [
+            "signal",
+            "home_team",
+            "away_team",
+            "first_leg_outcome",
+            "opposite_outcome",
+            "current_first_fair_prob",
+            "current_opposite_fair_prob",
+            "hit_probability",
+            "expected_pnl_per_contract",
+            "net_locked_profit_if_hit",
+            "latest_age_seconds",
+            "reasons",
+        ]
+        st.dataframe(df_signals[[c for c in cols if c in df_signals.columns]], use_container_width=True)
+else:
+    st.info("尚未生成 live_hedge_signals.json。运行 Phase 13 或 Phase 14 后这里会显示信号。")
+
+st.subheader("最近 alert")
+if alerts_path.exists():
+    lines = [line for line in alerts_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    alerts = [json.loads(line) for line in lines[-20:]]
+    if alerts:
+        st.dataframe(pd.DataFrame(alerts), use_container_width=True)
+    else:
+        st.caption("alert 日志为空。")
+else:
+    st.caption("尚未生成 alert 日志。")
 
 st.subheader("最近采集的赔率 ticks")
 try:

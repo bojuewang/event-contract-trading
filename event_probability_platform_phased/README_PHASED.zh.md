@@ -67,6 +67,8 @@ scripts/phase_status.sh
 | 12_live_ingestion_worker_check | 启动真实实时采集 worker，验证 event_ticks 持续增长并生成概率快照 |
 | 13_live_hedge_signal_snapshot | 聚合真实 ticks，生成当前 fair probability、目标价触达概率和 40/40 纸面交易信号 |
 | 14_live_signal_monitor_worker | 后台周期性刷新实时信号报告，并把纸面交易候选写入本地 alert 日志 |
+| 15_api_dashboard_signal_integration | 提供实时信号/alert API，并在 dashboard 中展示信号表与 alert 记录 |
+| 16_realtime_risk_guardrails | 生成实时风控状态，检查数据/信号新鲜度与 worker 存活，并接入 API/dashboard |
 
 ## 重要环境变量
 

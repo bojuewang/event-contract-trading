@@ -1,0 +1,33 @@
+# 15_api_dashboard_signal_integration API 与 Dashboard 信号展示联通
+# started_at=2026-05-20T01:31:05+00:00
+
+[15] 检查信号报告文件
+[15] 重启 FastAPI 以加载 /signals/live 与 /alerts/recent
+[15] API pid=9934
+[15] 等待 API health
+[15] API health OK
+[15] 验证 signals / alerts endpoints
+[15] signals endpoint status=ok signals=4
+[15] alerts endpoint status=ok count=2
+[15] 重启 Streamlit dashboard 以加载信号面板
+[15] dashboard pid=9975
+[15] 等待 dashboard
+[15] dashboard reachable: http://127.0.0.1:8501
+{
+  "status": "ok",
+  "generated_at": "2026-05-20T01:31:08+00:00",
+  "api": {
+    "health": "ok",
+    "signals_status": "ok",
+    "signals_count": 4,
+    "alerts_status": "ok",
+    "alerts_count": 2
+  },
+  "dashboard": {
+    "url": "http://127.0.0.1:8501",
+    "status": "reachable"
+  }
+}
+[15] Phase 15 完成。
+
+# finished_at=2026-05-20T01:31:08+00:00 returncode=0 elapsed_seconds=3.14

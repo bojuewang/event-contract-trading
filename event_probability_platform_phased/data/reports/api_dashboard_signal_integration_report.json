@@ -1,0 +1,15 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-20T01:31:08+00:00",
+  "api": {
+    "health": "ok",
+    "signals_status": "ok",
+    "signals_count": 4,
+    "alerts_status": "ok",
+    "alerts_count": 2
+  },
+  "dashboard": {
+    "url": "http://127.0.0.1:8501",
+    "status": "reachable"
+  }
+}

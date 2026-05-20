@@ -1,11 +1,19 @@
 from __future__ import annotations
 
+import json
+from collections import deque
+from pathlib import Path
+
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
 from odds_math import hedge_lock_profit, simulate_threshold_hit_probability
 
 app = FastAPI(title="Realtime Event Probability API", version="0.1.0")
+ROOT = Path(__file__).resolve().parent.parent
+LIVE_SIGNALS_PATH = ROOT / "data" / "reports" / "live_hedge_signals.json"
+ALERTS_PATH = ROOT / "data" / "alerts" / "hedge_signal_alerts.jsonl"
+RISK_STATUS_PATH = ROOT / "data" / "reports" / "risk_status.json"
 
 
 class HedgeRequest(BaseModel):
@@ -28,6 +36,34 @@ class ThresholdRequest(BaseModel):
 @app.get("/health")
 def health() -> dict:
     return {"ok": True}
+
+
+@app.get("/signals/live")
+def live_signals() -> dict:
+    if not LIVE_SIGNALS_PATH.exists():
+        return {"status": "missing", "path": str(LIVE_SIGNALS_PATH)}
+    return json.loads(LIVE_SIGNALS_PATH.read_text(encoding="utf-8"))
+
+
+@app.get("/alerts/recent")
+def recent_alerts(limit: int = 20) -> dict:
+    limit = max(1, min(limit, 200))
+    if not ALERTS_PATH.exists():
+        return {"status": "missing", "alerts": []}
+    lines: deque[str] = deque(maxlen=limit)
+    with ALERTS_PATH.open("r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                lines.append(line)
+    alerts = [json.loads(line) for line in lines]
+    return {"status": "ok", "count": len(alerts), "alerts": alerts}
+
+
+@app.get("/risk/status")
+def risk_status() -> dict:
+    if not RISK_STATUS_PATH.exists():
+        return {"status": "missing", "path": str(RISK_STATUS_PATH)}
+    return json.loads(RISK_STATUS_PATH.read_text(encoding="utf-8"))
 
 
 @app.post("/hedge/lock-profit")
