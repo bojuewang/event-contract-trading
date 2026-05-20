@@ -1,0 +1,25 @@
+{
+  "paper_only": true,
+  "created_at": "2026-05-20T01:37:19+00:00",
+  "description": "Paper positions tracked against live fair probabilities. This file never places real orders.",
+  "positions": [
+    {
+      "position_id": "paper_cavaliers_040_to_knicks_040",
+      "status": "open",
+      "paper_only": true,
+      "created_at": "2026-05-20T01:37:19+00:00",
+      "created_from": "phase_17_bootstrap_user_example",
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "home_team": "New York Knicks",
+      "away_team": "Cleveland Cavaliers",
+      "first_leg_outcome": "Cleveland Cavaliers",
+      "first_leg_price": 0.4,
+      "opposite_outcome": "New York Knicks",
+      "opposite_target_price": 0.4,
+      "quantity": 1.0,
+      "fee_per_contract": 0.0,
+      "slippage_per_leg": 0.005,
+      "notes": "Paper-only tracker for the original 40/40 Cavaliers -> Knicks example."
+    }
+  ]
+}

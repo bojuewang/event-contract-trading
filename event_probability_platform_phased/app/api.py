@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parent.parent
 LIVE_SIGNALS_PATH = ROOT / "data" / "reports" / "live_hedge_signals.json"
 ALERTS_PATH = ROOT / "data" / "alerts" / "hedge_signal_alerts.jsonl"
 RISK_STATUS_PATH = ROOT / "data" / "reports" / "risk_status.json"
+PAPER_POSITION_STATUS_PATH = ROOT / "data" / "reports" / "paper_position_status.json"
+PAPER_POSITIONS_PATH = ROOT / "data" / "paper_positions" / "open_positions.json"
 
 
 class HedgeRequest(BaseModel):
@@ -64,6 +66,20 @@ def risk_status() -> dict:
     if not RISK_STATUS_PATH.exists():
         return {"status": "missing", "path": str(RISK_STATUS_PATH)}
     return json.loads(RISK_STATUS_PATH.read_text(encoding="utf-8"))
+
+
+@app.get("/paper/positions")
+def paper_positions() -> dict:
+    if not PAPER_POSITION_STATUS_PATH.exists():
+        return {"status": "missing", "path": str(PAPER_POSITION_STATUS_PATH)}
+    return json.loads(PAPER_POSITION_STATUS_PATH.read_text(encoding="utf-8"))
+
+
+@app.get("/paper/positions/config")
+def paper_positions_config() -> dict:
+    if not PAPER_POSITIONS_PATH.exists():
+        return {"status": "missing", "path": str(PAPER_POSITIONS_PATH)}
+    return json.loads(PAPER_POSITIONS_PATH.read_text(encoding="utf-8"))
 
 
 @app.post("/hedge/lock-profit")

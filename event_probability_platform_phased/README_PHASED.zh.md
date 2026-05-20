@@ -69,6 +69,7 @@ scripts/phase_status.sh
 | 14_live_signal_monitor_worker | 后台周期性刷新实时信号报告，并把纸面交易候选写入本地 alert 日志 |
 | 15_api_dashboard_signal_integration | 提供实时信号/alert API，并在 dashboard 中展示信号表与 alert 记录 |
 | 16_realtime_risk_guardrails | 生成实时风控状态，检查数据/信号新鲜度与 worker 存活，并接入 API/dashboard |
+| 17_paper_position_tracker | 创建 paper-only 40/40 示例持仓追踪，显示第二腿触达状态、锁利和 mark PnL |
 
 ## 重要环境变量
 

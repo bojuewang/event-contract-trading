@@ -100,5 +100,11 @@
     "name": "实时风控状态与安全门",
     "script": "scripts/phases/16_realtime_risk_guardrails.sh",
     "description": "检查 worker、数据新鲜度、信号新鲜度、API/dashboard 状态，生成 risk_status 并接入 /risk/status 和 dashboard。"
+  },
+  {
+    "id": "17_paper_position_tracker",
+    "name": "纸面持仓追踪与第二腿状态",
+    "script": "scripts/phases/17_paper_position_tracker.sh",
+    "description": "为 40/40 示例创建 paper-only 持仓追踪，计算第二腿目标价状态、锁利金额、mark PnL，并接入 API/dashboard。"
   }
 ]

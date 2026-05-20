@@ -58,6 +58,7 @@ st.json(sim)
 st.subheader("实时对冲信号")
 signals_path = Path("data/reports/live_hedge_signals.json")
 alerts_path = Path("data/alerts/hedge_signal_alerts.jsonl")
+paper_positions_path = Path("data/reports/paper_position_status.json")
 
 if signals_path.exists():
     report = json.loads(signals_path.read_text(encoding="utf-8"))
@@ -90,6 +91,38 @@ if signals_path.exists():
         st.dataframe(df_signals[[c for c in cols if c in df_signals.columns]], use_container_width=True)
 else:
     st.info("尚未生成 live_hedge_signals.json。运行 Phase 13 或 Phase 14 后这里会显示信号。")
+
+st.subheader("纸面持仓追踪")
+if paper_positions_path.exists():
+    paper_report = json.loads(paper_positions_path.read_text(encoding="utf-8"))
+    positions = paper_report.get("positions", [])
+    p1, p2, p3, p4 = st.columns(4)
+    p1.metric("纸面持仓", paper_report.get("positions_evaluated", 0))
+    p2.metric("第二腿可执行", paper_report.get("ready_second_legs", 0))
+    p3.metric("高触达观察", paper_report.get("high_hit_watchlist", 0))
+    p4.metric("风控状态", paper_report.get("risk_status", "n/a"))
+    if positions:
+        df_positions = pd.DataFrame(positions)
+        df_positions["reasons"] = df_positions["reasons"].apply(lambda items: ", ".join(items) if isinstance(items, list) else items)
+        cols = [
+            "action",
+            "first_leg_outcome",
+            "opposite_outcome",
+            "quantity",
+            "first_leg_price",
+            "opposite_target_price",
+            "current_first_fair_prob",
+            "current_opposite_fair_prob",
+            "opposite_target_gap",
+            "hit_probability",
+            "net_locked_profit_per_contract_if_hit",
+            "mark_pnl_if_unhedged_now",
+            "latest_age_seconds",
+            "reasons",
+        ]
+        st.dataframe(df_positions[[c for c in cols if c in df_positions.columns]], use_container_width=True)
+else:
+    st.info("尚未生成 paper_position_status.json。运行 Phase 17 后这里会显示纸面持仓追踪。")
 
 st.subheader("最近 alert")
 if alerts_path.exists():

@@ -204,6 +204,18 @@
       "last_returncode": 0,
       "confirmed_at": "2026-05-20T01:34:13+00:00",
       "confirmed_token": "CONFIRM-16_realtime_risk_guardrails-4a16e242"
+    },
+    "17_paper_position_tracker": {
+      "status": "confirmed",
+      "name": "纸面持仓追踪与第二腿状态",
+      "last_started_at": "2026-05-20T01:37:19+00:00",
+      "last_log": "logs/17_paper_position_tracker.20260519_213719.log",
+      "confirmation_token": "CONFIRM-17_paper_position_tracker-41e6381f",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T01:37:22+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T01:41:57+00:00",
+      "confirmed_token": "CONFIRM-17_paper_position_tracker-41e6381f"
     }
   }
 }
