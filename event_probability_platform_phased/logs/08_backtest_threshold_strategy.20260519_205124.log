@@ -1,0 +1,28 @@
+# 08_backtest_threshold_strategy 40/40 阈值触达策略回测
+# started_at=2026-05-20T00:51:24+00:00
+
+[08] 回测 40/40 第二腿阈值触达策略
+{
+  "n_events": 20000,
+  "first_leg_price": 0.4,
+  "opposite_start_price": 0.6,
+  "opposite_target_price": 0.4,
+  "fee_per_contract": 0.0,
+  "slippage_per_leg": 0.005,
+  "hit_rate": 0.02635,
+  "average_first_hit_minute": 22.67504743833017,
+  "gross_locked_profit_if_hit": 0.19999999999999996,
+  "net_locked_profit_if_hit": 0.19499999999999995,
+  "average_pnl_per_contract": 0.007828249999999995,
+  "median_pnl_per_contract": -0.4,
+  "positive_pnl_rate": 0.4185,
+  "max_drawdown_per_contract_sequence": -37.27000000000171
+}
+saved data/backtests/threshold_40_40_backtest.csv
+saved data/backtests/threshold_40_40_metrics.json
+[08] 回测结果文件
+-rw-r--r-- 1 wangb wangb 931K May 19 20:51 data/backtests/threshold_40_40_backtest.csv
+-rw-r--r-- 1 wangb wangb  522 May 19 20:51 data/backtests/threshold_40_40_metrics.json
+[08] 回测阶段完成。
+
+# finished_at=2026-05-20T00:51:24+00:00 returncode=0 elapsed_seconds=0.38

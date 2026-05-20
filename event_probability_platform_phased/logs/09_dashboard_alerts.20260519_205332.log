@@ -1,0 +1,21 @@
+# 09_dashboard_alerts Dashboard 启动与信号展示
+# started_at=2026-05-20T00:53:32+00:00
+
+[09] 检查 API health
+[09] API OK
+[09] 启动/复用 Streamlit dashboard port=8501
+[09] dashboard pid=6696, log=logs/dashboard.log
+[WARN] dashboard 暂未响应，查看 logs/dashboard.log
+
+      👋 [1mWelcome to Streamlit![0m
+
+      If you'd like to receive helpful onboarding emails, news, offers, promotions,
+      and the occasional swag, please enter your email address below. Otherwise,
+      leave this field blank.
+
+      [34mEmail: [0m2026-05-19 20:53:33.200 
+[09] 检查模型和数据状态
+{'model': True, 'backtest_metrics': True, 'gpu_report': True}
+[09] Dashboard 阶段完成。
+
+# finished_at=2026-05-20T00:53:37+00:00 returncode=0 elapsed_seconds=5.04

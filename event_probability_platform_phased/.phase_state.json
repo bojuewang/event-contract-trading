@@ -86,22 +86,38 @@
       "confirmed_token": "CONFIRM-06_gpu_monte_carlo_check-af631baa"
     },
     "07_train_baseline_model": {
-      "status": "completed",
+      "status": "confirmed",
       "name": "Baseline 胜率模型训练",
       "last_started_at": "2026-05-20T00:49:18+00:00",
       "last_log": "logs/07_train_baseline_model.20260519_204918.log",
       "confirmation_token": "CONFIRM-07_train_baseline_model-addc529d",
       "last_error": null,
       "last_finished_at": "2026-05-20T00:49:21+00:00",
-      "last_returncode": 0
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:50:49+00:00",
+      "confirmed_token": "CONFIRM-07_train_baseline_model-addc529d"
     },
     "08_backtest_threshold_strategy": {
-      "status": "pending",
-      "name": "40/40 阈值触达策略回测"
+      "status": "confirmed",
+      "name": "40/40 阈值触达策略回测",
+      "last_started_at": "2026-05-20T00:51:24+00:00",
+      "last_log": "logs/08_backtest_threshold_strategy.20260519_205124.log",
+      "confirmation_token": "CONFIRM-08_backtest_threshold_strategy-632512cf",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:51:24+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:53:26+00:00",
+      "confirmed_token": "CONFIRM-08_backtest_threshold_strategy-632512cf"
     },
     "09_dashboard_alerts": {
-      "status": "pending",
-      "name": "Dashboard 启动与信号展示"
+      "status": "completed",
+      "name": "Dashboard 启动与信号展示",
+      "last_started_at": "2026-05-20T00:53:32+00:00",
+      "last_log": "logs/09_dashboard_alerts.20260519_205332.log",
+      "confirmation_token": "CONFIRM-09_dashboard_alerts-531780ab",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:53:37+00:00",
+      "last_returncode": 0
     },
     "10_readiness_report": {
       "status": "pending",
