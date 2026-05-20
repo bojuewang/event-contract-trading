@@ -1,0 +1,4 @@
+# Install PyTorch with the CUDA wheel matching your driver/GPU.
+# Prefer PyTorch's official selector: https://pytorch.org/get-started/locally/
+# Example, subject to change:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128

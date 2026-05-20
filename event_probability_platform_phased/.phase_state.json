@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-05-20T00:13:53+00:00",
+  "phases": {
+    "00_preflight": {
+      "status": "confirmed",
+      "name": "环境预检查与阶段门控初始化",
+      "last_started_at": "2026-05-20T00:13:58+00:00",
+      "last_log": "logs/00_preflight.20260519_201358.log",
+      "confirmation_token": "CONFIRM-00_preflight-4b09f391",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:13:58+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:23:41+00:00",
+      "confirmed_token": "CONFIRM-00_preflight-4b09f391"
+    },
+    "01_bootstrap_env": {
+      "status": "confirmed",
+      "name": "Python 虚拟环境与依赖安装",
+      "last_started_at": "2026-05-20T00:25:05+00:00",
+      "last_log": "logs/01_bootstrap_env.20260519_202505.log",
+      "confirmation_token": "CONFIRM-01_bootstrap_env-04469a7b",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:25:26+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:26:38+00:00",
+      "confirmed_token": "CONFIRM-01_bootstrap_env-04469a7b"
+    },
+    "02_services_db": {
+      "status": "failed",
+      "name": "Postgres / Redis 数据服务启动",
+      "last_started_at": "2026-05-20T00:26:45+00:00",
+      "last_log": "logs/02_services_db.20260519_202645.log",
+      "confirmation_token": null,
+      "last_error": "阶段脚本退出码 127",
+      "last_finished_at": "2026-05-20T00:26:45+00:00",
+      "last_returncode": 127
+    },
+    "03_probability_api": {
+      "status": "pending",
+      "name": "概率 API 与对冲计算验证"
+    },
+    "04_realtime_odds_ingestion": {
+      "status": "pending",
+      "name": "实时赔率采集 Worker"
+    },
+    "05_historical_odds_fetch": {
+      "status": "pending",
+      "name": "历史赔率快照抓取与落盘"
+    },
+    "06_gpu_monte_carlo_check": {
+      "status": "pending",
+      "name": "GPU 与 Monte Carlo 性能检查"
+    },
+    "07_train_baseline_model": {
+      "status": "pending",
+      "name": "Baseline 胜率模型训练"
+    },
+    "08_backtest_threshold_strategy": {
+      "status": "pending",
+      "name": "40/40 阈值触达策略回测"
+    },
+    "09_dashboard_alerts": {
+      "status": "pending",
+      "name": "Dashboard 启动与信号展示"
+    },
+    "10_readiness_report": {
+      "status": "pending",
+      "name": "生产化就绪检查报告"
+    }
+  }
+}

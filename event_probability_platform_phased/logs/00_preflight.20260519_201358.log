@@ -1,0 +1,21 @@
+# 00_preflight 环境预检查与阶段门控初始化
+# started_at=2026-05-20T00:13:58+00:00
+
+[00] 项目目录: /home/wangb/projects/event-contract-trading/event_probability_platform_phased
+[00] 当前时间: 2026-05-20T00:13:58Z
+[00] 检查 Python
+Python 3.12.3
+[00] Python major.minor = 3.12
+[00] Python 版本 OK
+[00] 检查 Docker / Docker Compose
+[WARN] docker 未安装；阶段 02 需要 Docker。
+[00] 检查 curl
+curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+[00] 检查 GPU 可见性
+NVIDIA GeForce RTX 5070, 591.44, 12227 MiB
+[00] 检查 .env
+[00] 尚无 .env；阶段 01 会从 .env.example 创建。
+[00] 阶段门控文件位置: .phase_state.json
+[00] 预检查完成。
+
+# finished_at=2026-05-20T00:13:58+00:00 returncode=0 elapsed_seconds=0.18

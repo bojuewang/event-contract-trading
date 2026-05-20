@@ -1,0 +1,7 @@
+# 02_services_db Postgres / Redis 数据服务启动
+# started_at=2026-05-20T00:26:45+00:00
+
+[02] 启动 Postgres / Redis
+/home/wangb/projects/event-contract-trading/event_probability_platform_phased/scripts/phases/02_services_db.sh: line 8: docker: command not found
+
+# finished_at=2026-05-20T00:26:45+00:00 returncode=127 elapsed_seconds=0.03

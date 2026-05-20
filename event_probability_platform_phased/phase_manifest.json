@@ -1,0 +1,68 @@
+[
+  {
+    "id": "00_preflight",
+    "name": "环境预检查与阶段门控初始化",
+    "script": "scripts/phases/00_preflight.sh",
+    "description": "检查 Python、Docker、curl、GPU 可见性、项目目录、日志目录和 .env 状态。"
+  },
+  {
+    "id": "01_bootstrap_env",
+    "name": "Python 虚拟环境与依赖安装",
+    "script": "scripts/phases/01_bootstrap_env.sh",
+    "description": "创建 .venv，安装 requirements，复制 .env.example，并验证核心包可导入。"
+  },
+  {
+    "id": "02_services_db",
+    "name": "Postgres / Redis 数据服务启动",
+    "script": "scripts/phases/02_services_db.sh",
+    "description": "启动 docker compose 服务，等待 Postgres 就绪，确认 event_ticks 表。"
+  },
+  {
+    "id": "03_probability_api",
+    "name": "概率 API 与对冲计算验证",
+    "script": "scripts/phases/03_probability_api.sh",
+    "description": "后台启动 FastAPI，验证 /health、锁利计算和阈值触达模拟接口。"
+  },
+  {
+    "id": "04_realtime_odds_ingestion",
+    "name": "实时赔率采集 Worker",
+    "script": "scripts/phases/04_realtime_odds_ingestion.sh",
+    "description": "检查 ODDS_API_KEY；有 key 则后台启动 The Odds API 采集，无 key 则执行本地样例转换 dry-run。"
+  },
+  {
+    "id": "05_historical_odds_fetch",
+    "name": "历史赔率快照抓取与落盘",
+    "script": "scripts/phases/05_historical_odds_fetch.sh",
+    "description": "从历史 API 抓取指定时间窗口的 odds snapshots；无 key 时生成 dry-run 训练样例。"
+  },
+  {
+    "id": "06_gpu_monte_carlo_check",
+    "name": "GPU 与 Monte Carlo 性能检查",
+    "script": "scripts/phases/06_gpu_monte_carlo_check.sh",
+    "description": "检查 nvidia-smi / torch.cuda；运行 CPU/GPU Monte Carlo benchmark，GPU 不可用也可继续。"
+  },
+  {
+    "id": "07_train_baseline_model",
+    "name": "Baseline 胜率模型训练",
+    "script": "scripts/phases/07_train_baseline_model.sh",
+    "description": "训练 baseline win probability model，保存 joblib，并输出 AUC、Brier、LogLoss。"
+  },
+  {
+    "id": "08_backtest_threshold_strategy",
+    "name": "40/40 阈值触达策略回测",
+    "script": "scripts/phases/08_backtest_threshold_strategy.sh",
+    "description": "回测第一腿买入后等待第二腿目标价的策略，输出触达率、锁利率、PnL、最大回撤。"
+  },
+  {
+    "id": "09_dashboard_alerts",
+    "name": "Dashboard 启动与信号展示",
+    "script": "scripts/phases/09_dashboard_alerts.sh",
+    "description": "后台启动 Streamlit dashboard，并检查 API、数据库、模型文件和最新 ticks。"
+  },
+  {
+    "id": "10_readiness_report",
+    "name": "生产化就绪检查报告",
+    "script": "scripts/phases/10_readiness_report.sh",
+    "description": "生成 data/reports/readiness_report.md，列出服务状态、数据状态、模型状态、风险开关和下一步。"
+  }
+]
