@@ -1,0 +1,121 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-20T01:20:18+00:00",
+  "total_event_ticks": 540,
+  "unique_events": 2,
+  "unique_sources": 9,
+  "latest_ingested_at": "2026-05-20T01:20:14.507770+00:00",
+  "latest_age_seconds": 4.446123,
+  "recent_probability_snapshot": [
+    {
+      "event_id": "51176769d0f89d3e39adc8e90922f84d",
+      "outcome": "Oklahoma City Thunder",
+      "tick_count": 153,
+      "avg_fair_prob": 0.682274,
+      "min_fair_prob": 0.677273,
+      "max_fair_prob": 0.688889,
+      "latest_ingested_at": "2026-05-20T01:20:14.507770+00:00"
+    },
+    {
+      "event_id": "51176769d0f89d3e39adc8e90922f84d",
+      "outcome": "San Antonio Spurs",
+      "tick_count": 153,
+      "avg_fair_prob": 0.317726,
+      "min_fair_prob": 0.311111,
+      "max_fair_prob": 0.322727,
+      "latest_ingested_at": "2026-05-20T01:20:14.507770+00:00"
+    },
+    {
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "outcome": "Cleveland Cavaliers",
+      "tick_count": 102,
+      "avg_fair_prob": 0.41159,
+      "min_fair_prob": 0.384422,
+      "max_fair_prob": 0.428571,
+      "latest_ingested_at": "2026-05-20T01:20:14.507770+00:00"
+    },
+    {
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "outcome": "New York Knicks",
+      "tick_count": 102,
+      "avg_fair_prob": 0.58841,
+      "min_fair_prob": 0.571429,
+      "max_fair_prob": 0.615578,
+      "latest_ingested_at": "2026-05-20T01:20:14.507770+00:00"
+    }
+  ],
+  "latest_rows": [
+    {
+      "source": "the_odds_api:betus",
+      "event_id": "51176769d0f89d3e39adc8e90922f84d",
+      "market": "h2h",
+      "outcome": "San Antonio Spurs",
+      "source_ts": "2026-05-20T01:20:07+00:00",
+      "ingested_at": "2026-05-20T01:20:14.507770+00:00",
+      "price": 3.1,
+      "raw_prob": 0.32258064516129,
+      "fair_prob": 0.311111111111111,
+      "meta": {
+        "away_team": "San Antonio Spurs",
+        "bookmaker": "BetUS",
+        "home_team": "Oklahoma City Thunder",
+        "ingest_ts": "2026-05-20T01:20:14.506689+00:00",
+        "commence_time": "2026-05-21T00:40:00Z"
+      }
+    },
+    {
+      "source": "the_odds_api:betus",
+      "event_id": "51176769d0f89d3e39adc8e90922f84d",
+      "market": "h2h",
+      "outcome": "Oklahoma City Thunder",
+      "source_ts": "2026-05-20T01:20:07+00:00",
+      "ingested_at": "2026-05-20T01:20:14.507770+00:00",
+      "price": 1.4,
+      "raw_prob": 0.714285714285714,
+      "fair_prob": 0.688888888888889,
+      "meta": {
+        "away_team": "San Antonio Spurs",
+        "bookmaker": "BetUS",
+        "home_team": "Oklahoma City Thunder",
+        "ingest_ts": "2026-05-20T01:20:14.506689+00:00",
+        "commence_time": "2026-05-21T00:40:00Z"
+      }
+    },
+    {
+      "source": "the_odds_api:mybookieag",
+      "event_id": "51176769d0f89d3e39adc8e90922f84d",
+      "market": "h2h",
+      "outcome": "San Antonio Spurs",
+      "source_ts": "2026-05-20T01:19:45+00:00",
+      "ingested_at": "2026-05-20T01:20:14.507770+00:00",
+      "price": 2.97,
+      "raw_prob": 0.336700336700337,
+      "fair_prob": 0.320366132723112,
+      "meta": {
+        "away_team": "San Antonio Spurs",
+        "bookmaker": "MyBookie.ag",
+        "home_team": "Oklahoma City Thunder",
+        "ingest_ts": "2026-05-20T01:20:14.506689+00:00",
+        "commence_time": "2026-05-21T00:40:00Z"
+      }
+    },
+    {
+      "source": "the_odds_api:mybookieag",
+      "event_id": "51176769d0f89d3e39adc8e90922f84d",
+      "market": "h2h",
+      "outcome": "Oklahoma City Thunder",
+      "source_ts": "2026-05-20T01:19:45+00:00",
+      "ingested_at": "2026-05-20T01:20:14.507770+00:00",
+      "price": 1.4,
+      "raw_prob": 0.714285714285714,
+      "fair_prob": 0.679633867276888,
+      "meta": {
+        "away_team": "San Antonio Spurs",
+        "bookmaker": "MyBookie.ag",
+        "home_team": "Oklahoma City Thunder",
+        "ingest_ts": "2026-05-20T01:20:14.506689+00:00",
+        "commence_time": "2026-05-21T00:40:00Z"
+      }
+    }
+  ]
+}

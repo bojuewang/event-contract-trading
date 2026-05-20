@@ -64,6 +64,9 @@ scripts/phase_status.sh
 | 09_dashboard_alerts | 启动 dashboard 并检查 API/模型/数据状态 |
 | 10_readiness_report | 生成生产化就绪报告 |
 | 11_real_data_keys_and_ingestion | 配置真实 ODDS_API_KEY 后，拉取实时赔率并写入 event_ticks |
+| 12_live_ingestion_worker_check | 启动真实实时采集 worker，验证 event_ticks 持续增长并生成概率快照 |
+| 13_live_hedge_signal_snapshot | 聚合真实 ticks，生成当前 fair probability、目标价触达概率和 40/40 纸面交易信号 |
+| 14_live_signal_monitor_worker | 后台周期性刷新实时信号报告，并把纸面交易候选写入本地 alert 日志 |
 
 ## 重要环境变量
 

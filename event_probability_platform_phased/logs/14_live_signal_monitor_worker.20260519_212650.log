@@ -1,0 +1,24 @@
+# 14_live_signal_monitor_worker 实时信号刷新 Worker 与告警日志
+# started_at=2026-05-20T01:26:50+00:00
+
+[14] 检查实时赔率采集 worker
+[14] 检查 Postgres / Redis 容器
+[14] 启动/复用实时信号 monitor worker interval=5s
+[14] signal monitor pid=9497, log=logs/live_signal_monitor.log
+[14] 观察 20s，确认信号文件持续刷新
+[14] signal monitor 日志 tail:
+{"generated_at": "2026-05-20T01:26:50+00:00", "status": "ok", "events_seen": 2, "signals": 4, "paper_trade_candidates": 2, "new_alerts": 2}
+{"generated_at": "2026-05-20T01:26:55+00:00", "status": "ok", "events_seen": 2, "signals": 4, "paper_trade_candidates": 2, "new_alerts": 0}
+{"generated_at": "2026-05-20T01:27:00+00:00", "status": "ok", "events_seen": 2, "signals": 4, "paper_trade_candidates": 2, "new_alerts": 0}
+{"generated_at": "2026-05-20T01:27:06+00:00", "status": "ok", "events_seen": 2, "signals": 4, "paper_trade_candidates": 2, "new_alerts": 0}
+[14] 最新信号报告摘要
+status=ok generated_at=2026-05-20T01:27:06+00:00 events_seen=2 signals=4
+paper_trade_candidates=2
+alerts_path=data/alerts/hedge_signal_alerts.jsonl alerts_lines=2
+paper_trade_candidate: Oklahoma City Thunder -> San Antonio Spurs hit=1.000 ev=0.1950 age=0.4s
+paper_trade_candidate: New York Knicks -> Cleveland Cavaliers hit=0.930 ev=0.1948 age=0.4s
+watch: Cleveland Cavaliers -> New York Knicks hit=0.000 ev=0.0076 age=0.4s
+reject: San Antonio Spurs -> Oklahoma City Thunder hit=0.000 ev=-0.0823 age=0.4s
+[14] Phase 14 完成。
+
+# finished_at=2026-05-20T01:27:10+00:00 returncode=0 elapsed_seconds=20.20

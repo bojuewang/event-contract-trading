@@ -134,14 +134,52 @@
       "confirmed_token": "CONFIRM-10_readiness_report-122e0489"
     },
     "11_real_data_keys_and_ingestion": {
-      "status": "completed",
+      "status": "confirmed",
       "name": "真实数据源密钥与实时写入验证",
       "last_started_at": "2026-05-20T01:15:39+00:00",
       "last_log": "logs/11_real_data_keys_and_ingestion.20260519_211539.log",
       "confirmation_token": "CONFIRM-11_real_data_keys_and_ingestion-c1fed11b",
       "last_error": null,
       "last_finished_at": "2026-05-20T01:15:40+00:00",
-      "last_returncode": 0
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T01:15:56+00:00",
+      "confirmed_token": "CONFIRM-11_real_data_keys_and_ingestion-c1fed11b"
+    },
+    "12_live_ingestion_worker_check": {
+      "status": "confirmed",
+      "name": "真实实时采集 Worker 持续写入验证",
+      "last_started_at": "2026-05-20T01:18:47+00:00",
+      "last_log": "logs/12_live_ingestion_worker_check.20260519_211847.log",
+      "confirmation_token": "CONFIRM-12_live_ingestion_worker_check-ed723c7a",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T01:19:09+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T01:19:41+00:00",
+      "confirmed_token": "CONFIRM-12_live_ingestion_worker_check-ed723c7a"
+    },
+    "13_live_hedge_signal_snapshot": {
+      "status": "confirmed",
+      "name": "实时 40/40 对冲信号快照",
+      "last_started_at": "2026-05-20T01:24:27+00:00",
+      "last_log": "logs/13_live_hedge_signal_snapshot.20260519_212427.log",
+      "confirmation_token": "CONFIRM-13_live_hedge_signal_snapshot-d8a7faf7",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T01:24:27+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T01:25:14+00:00",
+      "confirmed_token": "CONFIRM-13_live_hedge_signal_snapshot-d8a7faf7"
+    },
+    "14_live_signal_monitor_worker": {
+      "status": "confirmed",
+      "name": "实时信号刷新 Worker 与告警日志",
+      "last_started_at": "2026-05-20T01:26:50+00:00",
+      "last_log": "logs/14_live_signal_monitor_worker.20260519_212650.log",
+      "confirmation_token": "CONFIRM-14_live_signal_monitor_worker-95a734fe",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T01:27:10+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T01:28:55+00:00",
+      "confirmed_token": "CONFIRM-14_live_signal_monitor_worker-95a734fe"
     }
   }
 }

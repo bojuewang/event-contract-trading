@@ -1,0 +1,164 @@
+# 13_live_hedge_signal_snapshot 实时 40/40 对冲信号快照
+# started_at=2026-05-20T01:24:27+00:00
+
+[13] 检查 Postgres / Redis 容器
+[13] event_ticks count=1950
+[13] 生成实时 fair probability 与 40/40 对冲信号快照
+{
+  "status": "ok",
+  "generated_at": "2026-05-20T01:24:27+00:00",
+  "parameters": {
+    "window_minutes": 3.0,
+    "first_leg_price": 0.4,
+    "opposite_target_price": 0.4,
+    "fee_per_contract": 0.0,
+    "slippage_per_leg": 0.005,
+    "minutes_remaining": 36.0,
+    "vol_per_sqrt_min": 0.045,
+    "mean_reversion": 0.05,
+    "n_paths": 20000,
+    "min_hit_probability": 0.15,
+    "entry_tolerance": 0.03,
+    "max_data_age_seconds": 30.0
+  },
+  "hedge_lock_profit": {
+    "first_leg_price": 0.4,
+    "second_leg_target": 0.4,
+    "gross_locked_profit_per_contract": 0.19999999999999996,
+    "net_locked_profit_per_contract": 0.19999999999999996,
+    "roi_on_cost": 0.24999999999999994
+  },
+  "events_seen": 2,
+  "signals": [
+    {
+      "event_id": "51176769d0f89d3e39adc8e90922f84d",
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-21T00:40:00Z",
+      "first_leg_outcome": "Oklahoma City Thunder",
+      "opposite_outcome": "San Antonio Spurs",
+      "current_first_fair_prob": 0.6822743898953485,
+      "current_opposite_fair_prob": 0.31772561010465156,
+      "first_leg_price": 0.4,
+      "opposite_target_price": 0.4,
+      "entry_edge": 0.2822743898953485,
+      "opposite_target_gap": -0.08227438989534847,
+      "hit_probability": 1.0,
+      "expected_first_hit_minute": 0.0,
+      "gross_locked_profit_if_hit": 0.19999999999999996,
+      "net_locked_profit_if_hit": 0.19499999999999995,
+      "expected_unhedged_pnl_if_no_hit": 0.2822743898953485,
+      "expected_pnl_per_contract": 0.19499999999999995,
+      "roi_on_cost_if_hit": 0.24999999999999994,
+      "tick_count_first": 306,
+      "tick_count_opposite": 306,
+      "latest_ingested_at": "2026-05-20T01:24:24.733864+00:00",
+      "latest_age_seconds": 3.046813,
+      "signal": "paper_trade_candidate",
+      "reasons": [
+        "passes_baseline_filters"
+      ]
+    },
+    {
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "home_team": "New York Knicks",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-05-20T00:13:43Z",
+      "first_leg_outcome": "New York Knicks",
+      "opposite_outcome": "Cleveland Cavaliers",
+      "current_first_fair_prob": 0.5856675623307102,
+      "current_opposite_fair_prob": 0.4143324376692899,
+      "first_leg_price": 0.4,
+      "opposite_target_price": 0.4,
+      "entry_edge": 0.18566756233071013,
+      "opposite_target_gap": 0.014332437669289877,
+      "hit_probability": 0.86475,
+      "expected_first_hit_minute": 7.979314830875976,
+      "gross_locked_profit_if_hit": 0.19999999999999996,
+      "net_locked_profit_if_hit": 0.19499999999999995,
+      "expected_unhedged_pnl_if_no_hit": 0.18566756233071013,
+      "expected_pnl_per_contract": 0.1937377878052285,
+      "roi_on_cost_if_hit": 0.24999999999999994,
+      "tick_count_first": 204,
+      "tick_count_opposite": 204,
+      "latest_ingested_at": "2026-05-20T01:24:24.733864+00:00",
+      "latest_age_seconds": 3.120967,
+      "signal": "paper_trade_candidate",
+      "reasons": [
+        "passes_baseline_filters"
+      ]
+    },
+    {
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "home_team": "New York Knicks",
+      "away_team": "Cleveland Cavaliers",
+      "commence_time": "2026-05-20T00:13:43Z",
+      "first_leg_outcome": "Cleveland Cavaliers",
+      "opposite_outcome": "New York Knicks",
+      "current_first_fair_prob": 0.4143324376692899,
+      "current_opposite_fair_prob": 0.5856675623307102,
+      "first_leg_price": 0.4,
+      "opposite_target_price": 0.4,
+      "entry_edge": 0.014332437669289877,
+      "opposite_target_gap": 0.18566756233071013,
+      "hit_probability": 0.0,
+      "expected_first_hit_minute": null,
+      "gross_locked_profit_if_hit": 0.19999999999999996,
+      "net_locked_profit_if_hit": 0.19499999999999995,
+      "expected_unhedged_pnl_if_no_hit": 0.01433243766928985,
+      "expected_pnl_per_contract": 0.01433243766928985,
+      "roi_on_cost_if_hit": 0.24999999999999994,
+      "tick_count_first": 204,
+      "tick_count_opposite": 204,
+      "latest_ingested_at": "2026-05-20T01:24:24.733864+00:00",
+      "latest_age_seconds": 3.085193,
+      "signal": "watch",
+      "reasons": [
+        "target_hit_probability_low"
+      ]
+    },
+    {
+      "event_id": "51176769d0f89d3e39adc8e90922f84d",
+      "home_team": "Oklahoma City Thunder",
+      "away_team": "San Antonio Spurs",
+      "commence_time": "2026-05-21T00:40:00Z",
+      "first_leg_outcome": "San Antonio Spurs",
+      "opposite_outcome": "Oklahoma City Thunder",
+      "current_first_fair_prob": 0.31772561010465156,
+      "current_opposite_fair_prob": 0.6822743898953485,
+      "first_leg_price": 0.4,
+      "opposite_target_price": 0.4,
+      "entry_edge": -0.08227438989534847,
+      "opposite_target_gap": 0.2822743898953485,
+      "hit_probability": 0.0,
+      "expected_first_hit_minute": null,
+      "gross_locked_profit_if_hit": 0.19999999999999996,
+      "net_locked_profit_if_hit": 0.19499999999999995,
+      "expected_unhedged_pnl_if_no_hit": -0.0822743898953485,
+      "expected_pnl_per_contract": -0.0822743898953485,
+      "roi_on_cost_if_hit": 0.24999999999999994,
+      "tick_count_first": 306,
+      "tick_count_opposite": 306,
+      "latest_ingested_at": "2026-05-20T01:24:24.733864+00:00",
+      "latest_age_seconds": 3.046826,
+      "signal": "reject",
+      "reasons": [
+        "target_hit_probability_low",
+        "first_leg_price_above_fair_value",
+        "expected_pnl_not_positive"
+      ]
+    }
+  ],
+  "skipped_events": []
+}
+saved data/reports/live_hedge_signals.json
+saved data/reports/live_hedge_signals.csv
+[13] 信号摘要
+status=ok events_seen=2 signals=4
+paper_trade_candidate: Oklahoma City Thunder first=0.6823 vs San Antonio Spurs opp=0.3177 hit=1.000 ev=0.1950 reasons=passes_baseline_filters
+paper_trade_candidate: New York Knicks first=0.5857 vs Cleveland Cavaliers opp=0.4143 hit=0.865 ev=0.1937 reasons=passes_baseline_filters
+watch: Cleveland Cavaliers first=0.4143 vs New York Knicks opp=0.5857 hit=0.000 ev=0.0143 reasons=target_hit_probability_low
+reject: San Antonio Spurs first=0.3177 vs Oklahoma City Thunder opp=0.6823 hit=0.000 ev=-0.0823 reasons=target_hit_probability_low,first_leg_price_above_fair_value,expected_pnl_not_positive
+[13] Phase 13 完成。
+
+# finished_at=2026-05-20T01:24:27+00:00 returncode=0 elapsed_seconds=0.72
