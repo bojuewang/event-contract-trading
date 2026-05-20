@@ -1,6 +1,167 @@
 {
-  "status": "blocked_missing_odds_api_key",
-  "generated_at": "2026-05-20T01:03:18+00:00",
-  "required_env": "ODDS_API_KEY",
-  "next_step": "Edit .env and set ODDS_API_KEY to a real The Odds API key, then rerun Phase 11."
+  "status": "ok",
+  "generated_at": "2026-05-20T01:15:40+00:00",
+  "sport": "basketball_nba",
+  "regions": "us",
+  "markets": "h2h",
+  "odds_format": "decimal",
+  "finished_at": "2026-05-20T01:15:40+00:00",
+  "events_received": 2,
+  "rows_transformed": 30,
+  "rows_written": 30,
+  "event_ticks_before": 0,
+  "event_ticks_after": 30,
+  "unique_events": 2,
+  "sources": [
+    "the_odds_api:betmgm",
+    "the_odds_api:betonlineag",
+    "the_odds_api:betrivers",
+    "the_odds_api:betus",
+    "the_odds_api:bovada",
+    "the_odds_api:draftkings",
+    "the_odds_api:fanduel",
+    "the_odds_api:lowvig",
+    "the_odds_api:mybookieag"
+  ],
+  "markets_seen": [
+    "h2h"
+  ],
+  "preview": [
+    {
+      "source": "the_odds_api:draftkings",
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "market": "h2h",
+      "outcome": "Cleveland Cavaliers",
+      "source_ts": "2026-05-20 01:15:12+00:00",
+      "price": 2.24,
+      "raw_prob": 0.4464285714285714,
+      "fair_prob": 0.4196891191709845,
+      "meta": {
+        "home_team": "New York Knicks",
+        "away_team": "Cleveland Cavaliers",
+        "commence_time": "2026-05-20T00:13:43Z",
+        "bookmaker": "DraftKings",
+        "ingest_ts": "2026-05-20T01:15:40.734978+00:00"
+      }
+    },
+    {
+      "source": "the_odds_api:draftkings",
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "market": "h2h",
+      "outcome": "New York Knicks",
+      "source_ts": "2026-05-20 01:15:12+00:00",
+      "price": 1.62,
+      "raw_prob": 0.6172839506172839,
+      "fair_prob": 0.5803108808290156,
+      "meta": {
+        "home_team": "New York Knicks",
+        "away_team": "Cleveland Cavaliers",
+        "commence_time": "2026-05-20T00:13:43Z",
+        "bookmaker": "DraftKings",
+        "ingest_ts": "2026-05-20T01:15:40.734978+00:00"
+      }
+    },
+    {
+      "source": "the_odds_api:betrivers",
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "market": "h2h",
+      "outcome": "Cleveland Cavaliers",
+      "source_ts": "2026-05-20 01:14:52+00:00",
+      "price": 2.25,
+      "raw_prob": 0.4444444444444444,
+      "fair_prob": 0.4186046511627907,
+      "meta": {
+        "home_team": "New York Knicks",
+        "away_team": "Cleveland Cavaliers",
+        "commence_time": "2026-05-20T00:13:43Z",
+        "bookmaker": "BetRivers",
+        "ingest_ts": "2026-05-20T01:15:40.734978+00:00"
+      }
+    },
+    {
+      "source": "the_odds_api:betrivers",
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "market": "h2h",
+      "outcome": "New York Knicks",
+      "source_ts": "2026-05-20 01:14:52+00:00",
+      "price": 1.62,
+      "raw_prob": 0.6172839506172839,
+      "fair_prob": 0.5813953488372093,
+      "meta": {
+        "home_team": "New York Knicks",
+        "away_team": "Cleveland Cavaliers",
+        "commence_time": "2026-05-20T00:13:43Z",
+        "bookmaker": "BetRivers",
+        "ingest_ts": "2026-05-20T01:15:40.734978+00:00"
+      }
+    },
+    {
+      "source": "the_odds_api:fanduel",
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "market": "h2h",
+      "outcome": "Cleveland Cavaliers",
+      "source_ts": "2026-05-20 01:15:31+00:00",
+      "price": 2.16,
+      "raw_prob": 0.4629629629629629,
+      "fair_prob": 0.4375,
+      "meta": {
+        "home_team": "New York Knicks",
+        "away_team": "Cleveland Cavaliers",
+        "commence_time": "2026-05-20T00:13:43Z",
+        "bookmaker": "FanDuel",
+        "ingest_ts": "2026-05-20T01:15:40.734978+00:00"
+      }
+    },
+    {
+      "source": "the_odds_api:fanduel",
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "market": "h2h",
+      "outcome": "New York Knicks",
+      "source_ts": "2026-05-20 01:15:31+00:00",
+      "price": 1.68,
+      "raw_prob": 0.5952380952380952,
+      "fair_prob": 0.5625,
+      "meta": {
+        "home_team": "New York Knicks",
+        "away_team": "Cleveland Cavaliers",
+        "commence_time": "2026-05-20T00:13:43Z",
+        "bookmaker": "FanDuel",
+        "ingest_ts": "2026-05-20T01:15:40.734978+00:00"
+      }
+    },
+    {
+      "source": "the_odds_api:betmgm",
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "market": "h2h",
+      "outcome": "Cleveland Cavaliers",
+      "source_ts": "2026-05-20 01:14:54+00:00",
+      "price": 2.25,
+      "raw_prob": 0.4444444444444444,
+      "fair_prob": 0.4186046511627907,
+      "meta": {
+        "home_team": "New York Knicks",
+        "away_team": "Cleveland Cavaliers",
+        "commence_time": "2026-05-20T00:13:43Z",
+        "bookmaker": "BetMGM",
+        "ingest_ts": "2026-05-20T01:15:40.734978+00:00"
+      }
+    },
+    {
+      "source": "the_odds_api:betmgm",
+      "event_id": "7e2d40a6d3b163e318b7abbe026c40c1",
+      "market": "h2h",
+      "outcome": "New York Knicks",
+      "source_ts": "2026-05-20 01:14:54+00:00",
+      "price": 1.62,
+      "raw_prob": 0.6172839506172839,
+      "fair_prob": 0.5813953488372093,
+      "meta": {
+        "home_team": "New York Knicks",
+        "away_team": "Cleveland Cavaliers",
+        "commence_time": "2026-05-20T00:13:43Z",
+        "bookmaker": "BetMGM",
+        "ingest_ts": "2026-05-20T01:15:40.734978+00:00"
+      }
+    }
+  ]
 }

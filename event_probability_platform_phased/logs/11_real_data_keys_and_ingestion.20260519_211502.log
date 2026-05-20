@@ -1,0 +1,8 @@
+# 11_real_data_keys_and_ingestion 真实数据源密钥与实时写入验证
+# started_at=2026-05-20T01:15:02+00:00
+
+[11] 真实数据源接入检查
+[11] 检查 Postgres / Redis 容器
+permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+
+# finished_at=2026-05-20T01:15:02+00:00 returncode=1 elapsed_seconds=0.18

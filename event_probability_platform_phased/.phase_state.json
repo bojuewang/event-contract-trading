@@ -134,14 +134,14 @@
       "confirmed_token": "CONFIRM-10_readiness_report-122e0489"
     },
     "11_real_data_keys_and_ingestion": {
-      "status": "failed",
+      "status": "completed",
       "name": "真实数据源密钥与实时写入验证",
-      "last_started_at": "2026-05-20T01:03:18+00:00",
-      "last_log": "logs/11_real_data_keys_and_ingestion.20260519_210318.log",
-      "confirmation_token": null,
-      "last_error": "阶段脚本退出码 2",
-      "last_finished_at": "2026-05-20T01:03:18+00:00",
-      "last_returncode": 2
+      "last_started_at": "2026-05-20T01:15:39+00:00",
+      "last_log": "logs/11_real_data_keys_and_ingestion.20260519_211539.log",
+      "confirmation_token": "CONFIRM-11_real_data_keys_and_ingestion-c1fed11b",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T01:15:40+00:00",
+      "last_returncode": 0
     }
   }
 }
