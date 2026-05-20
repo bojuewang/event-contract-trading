@@ -1,0 +1,12 @@
+# 07_train_baseline_model Baseline 胜率模型训练
+# started_at=2026-05-20T00:49:18+00:00
+
+[07] 训练 baseline win probability model
+AUC: 0.813307630612934
+Brier: 0.1752419429405333
+LogLoss: 0.5234167565100051
+saved data/models/baseline_winprob.joblib
+[07] model saved: data/models/baseline_winprob.joblib size_bytes=1035108
+[07] 训练阶段完成。
+
+# finished_at=2026-05-20T00:49:21+00:00 returncode=0 elapsed_seconds=3.43

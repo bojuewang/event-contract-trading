@@ -26,34 +26,74 @@
       "confirmed_token": "CONFIRM-01_bootstrap_env-04469a7b"
     },
     "02_services_db": {
-      "status": "failed",
+      "status": "confirmed",
       "name": "Postgres / Redis 数据服务启动",
-      "last_started_at": "2026-05-20T00:26:45+00:00",
-      "last_log": "logs/02_services_db.20260519_202645.log",
-      "confirmation_token": null,
-      "last_error": "阶段脚本退出码 127",
-      "last_finished_at": "2026-05-20T00:26:45+00:00",
-      "last_returncode": 127
+      "last_started_at": "2026-05-20T00:38:29+00:00",
+      "last_log": "logs/02_services_db.20260519_203829.log",
+      "confirmation_token": "CONFIRM-02_services_db-9283ab4b",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:38:45+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:39:19+00:00",
+      "confirmed_token": "CONFIRM-02_services_db-9283ab4b"
     },
     "03_probability_api": {
-      "status": "pending",
-      "name": "概率 API 与对冲计算验证"
+      "status": "confirmed",
+      "name": "概率 API 与对冲计算验证",
+      "last_started_at": "2026-05-20T00:39:45+00:00",
+      "last_log": "logs/03_probability_api.20260519_203945.log",
+      "confirmation_token": "CONFIRM-03_probability_api-efa4e234",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:39:47+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:40:04+00:00",
+      "confirmed_token": "CONFIRM-03_probability_api-efa4e234"
     },
     "04_realtime_odds_ingestion": {
-      "status": "pending",
-      "name": "实时赔率采集 Worker"
+      "status": "confirmed",
+      "name": "实时赔率采集 Worker",
+      "last_started_at": "2026-05-20T00:40:49+00:00",
+      "last_log": "logs/04_realtime_odds_ingestion.20260519_204049.log",
+      "confirmation_token": "CONFIRM-04_realtime_odds_ingestion-59e0dbd6",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:40:50+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:41:16+00:00",
+      "confirmed_token": "CONFIRM-04_realtime_odds_ingestion-59e0dbd6"
     },
     "05_historical_odds_fetch": {
-      "status": "pending",
-      "name": "历史赔率快照抓取与落盘"
+      "status": "confirmed",
+      "name": "历史赔率快照抓取与落盘",
+      "last_started_at": "2026-05-20T00:41:35+00:00",
+      "last_log": "logs/05_historical_odds_fetch.20260519_204135.log",
+      "confirmation_token": "CONFIRM-05_historical_odds_fetch-2dbaaa76",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:41:36+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:41:48+00:00",
+      "confirmed_token": "CONFIRM-05_historical_odds_fetch-2dbaaa76"
     },
     "06_gpu_monte_carlo_check": {
-      "status": "pending",
-      "name": "GPU 与 Monte Carlo 性能检查"
+      "status": "confirmed",
+      "name": "GPU 与 Monte Carlo 性能检查",
+      "last_started_at": "2026-05-20T00:46:10+00:00",
+      "last_log": "logs/06_gpu_monte_carlo_check.20260519_204610.log",
+      "confirmation_token": "CONFIRM-06_gpu_monte_carlo_check-af631baa",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:46:13+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:49:12+00:00",
+      "confirmed_token": "CONFIRM-06_gpu_monte_carlo_check-af631baa"
     },
     "07_train_baseline_model": {
-      "status": "pending",
-      "name": "Baseline 胜率模型训练"
+      "status": "completed",
+      "name": "Baseline 胜率模型训练",
+      "last_started_at": "2026-05-20T00:49:18+00:00",
+      "last_log": "logs/07_train_baseline_model.20260519_204918.log",
+      "confirmation_token": "CONFIRM-07_train_baseline_model-addc529d",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:49:21+00:00",
+      "last_returncode": 0
     },
     "08_backtest_threshold_strategy": {
       "status": "pending",

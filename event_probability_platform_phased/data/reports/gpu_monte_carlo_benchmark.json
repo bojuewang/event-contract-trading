@@ -1,0 +1,21 @@
+{
+  "cpu": {
+    "hit_probability": 0.0,
+    "expected_first_hit_minute": null,
+    "paths": 200000,
+    "dt_minutes": 0.25,
+    "model": "logit_OU_baseline",
+    "device": "cpu_numpy",
+    "elapsed_seconds": 0.292799158998605,
+    "paths_per_second": 683062.0712300369
+  },
+  "gpu": {
+    "device": "NVIDIA GeForce RTX 5070",
+    "available": true,
+    "hit_probability": 0.0,
+    "paths": 200000,
+    "minutes": 24.0,
+    "elapsed_seconds": 0.04476956600046833,
+    "paths_per_second": 4467320.500670206
+  }
+}

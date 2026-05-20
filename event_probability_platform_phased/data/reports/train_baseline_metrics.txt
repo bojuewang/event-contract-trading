@@ -1,0 +1,4 @@
+AUC: 0.813307630612934
+Brier: 0.1752419429405333
+LogLoss: 0.5234167565100051
+saved data/models/baseline_winprob.joblib

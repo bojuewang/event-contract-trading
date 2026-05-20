@@ -1,0 +1,10 @@
+# 04_realtime_odds_ingestion 实时赔率采集 Worker
+# started_at=2026-05-20T00:40:49+00:00
+
+[04] 未设置 ODDS_API_KEY，执行本地 dry-run，不调用外部 API。
+{'source': 'the_odds_api:demo_book', 'event_id': 'sample-cavs-knicks', 'market': 'h2h', 'outcome': 'Cleveland Cavaliers', 'source_ts': '2026-05-19T23:10:00Z', 'price': 2.5, 'raw_prob': 0.4, 'fair_prob': 0.40047961630695444, 'meta': {'home_team': 'New York Knicks', 'away_team': 'Cleveland Cavaliers', 'commence_time': '2026-05-19T23:00:00Z', 'bookmaker': 'Demo Book', 'ingest_ts': '2026-05-20T00:40:50.327779+00:00'}}
+{'source': 'the_odds_api:demo_book', 'event_id': 'sample-cavs-knicks', 'market': 'h2h', 'outcome': 'New York Knicks', 'source_ts': '2026-05-19T23:10:00Z', 'price': 1.67, 'raw_prob': 0.5988023952095809, 'fair_prob': 0.5995203836930456, 'meta': {'home_team': 'New York Knicks', 'away_team': 'Cleveland Cavaliers', 'commence_time': '2026-05-19T23:00:00Z', 'bookmaker': 'Demo Book', 'ingest_ts': '2026-05-20T00:40:50.327779+00:00'}}
+[04] dry-run rows=2
+[04] dry-run 完成。填入 .env 的 ODDS_API_KEY 后可重跑本阶段。
+
+# finished_at=2026-05-20T00:40:50+00:00 returncode=0 elapsed_seconds=0.45

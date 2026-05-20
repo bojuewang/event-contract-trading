@@ -1,0 +1,8 @@
+# 05_historical_odds_fetch 历史赔率快照抓取与落盘
+# started_at=2026-05-20T00:41:35+00:00
+
+[05] 未设置 ODDS_API_KEY，生成历史训练 dry-run 样例，不调用外部 API。
+[05] saved data/historical_odds/dry_run_training_sample.csv rows=5000
+[05] dry-run 历史数据阶段完成。
+
+# finished_at=2026-05-20T00:41:36+00:00 returncode=0 elapsed_seconds=0.80
