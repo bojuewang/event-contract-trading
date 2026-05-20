@@ -63,6 +63,7 @@ scripts/phase_status.sh
 | 08_backtest_threshold_strategy | 回测 40/40 第二腿目标价触达策略 |
 | 09_dashboard_alerts | 启动 dashboard 并检查 API/模型/数据状态 |
 | 10_readiness_report | 生成生产化就绪报告 |
+| 11_real_data_keys_and_ingestion | 配置真实 ODDS_API_KEY 后，拉取实时赔率并写入 event_ticks |
 
 ## 重要环境变量
 

@@ -23,7 +23,12 @@ if [[ -f "$PID_FILE" ]] && kill -0 "$(cat "$PID_FILE")" >/dev/null 2>&1; then
   echo "[09] dashboard 已运行 pid=$(cat "$PID_FILE")"
 else
   export PYTHONPATH=app
-  nohup streamlit run app/dashboard.py --server.port "$DASHBOARD_PORT" --server.address 0.0.0.0 > "$LOG_FILE" 2>&1 &
+  nohup streamlit run app/dashboard.py \
+    --server.port "$DASHBOARD_PORT" \
+    --server.address 0.0.0.0 \
+    --server.headless true \
+    --browser.gatherUsageStats false \
+    > "$LOG_FILE" 2>&1 &
   echo $! > "$PID_FILE"
   echo "[09] dashboard pid=$(cat "$PID_FILE"), log=$LOG_FILE"
 fi

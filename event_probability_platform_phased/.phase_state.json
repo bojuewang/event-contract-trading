@@ -110,18 +110,38 @@
       "confirmed_token": "CONFIRM-08_backtest_threshold_strategy-632512cf"
     },
     "09_dashboard_alerts": {
-      "status": "completed",
+      "status": "confirmed",
       "name": "Dashboard 启动与信号展示",
-      "last_started_at": "2026-05-20T00:53:32+00:00",
-      "last_log": "logs/09_dashboard_alerts.20260519_205332.log",
-      "confirmation_token": "CONFIRM-09_dashboard_alerts-531780ab",
+      "last_started_at": "2026-05-20T00:55:04+00:00",
+      "last_log": "logs/09_dashboard_alerts.20260519_205504.log",
+      "confirmation_token": "CONFIRM-09_dashboard_alerts-364922b1",
       "last_error": null,
-      "last_finished_at": "2026-05-20T00:53:37+00:00",
-      "last_returncode": 0
+      "last_finished_at": "2026-05-20T00:55:09+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:55:57+00:00",
+      "confirmed_token": "CONFIRM-09_dashboard_alerts-364922b1"
     },
     "10_readiness_report": {
-      "status": "pending",
-      "name": "生产化就绪检查报告"
+      "status": "confirmed",
+      "name": "生产化就绪检查报告",
+      "last_started_at": "2026-05-20T00:56:07+00:00",
+      "last_log": "logs/10_readiness_report.20260519_205607.log",
+      "confirmation_token": "CONFIRM-10_readiness_report-122e0489",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T00:56:08+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T00:56:25+00:00",
+      "confirmed_token": "CONFIRM-10_readiness_report-122e0489"
+    },
+    "11_real_data_keys_and_ingestion": {
+      "status": "failed",
+      "name": "真实数据源密钥与实时写入验证",
+      "last_started_at": "2026-05-20T01:03:18+00:00",
+      "last_log": "logs/11_real_data_keys_and_ingestion.20260519_210318.log",
+      "confirmation_token": null,
+      "last_error": "阶段脚本退出码 2",
+      "last_finished_at": "2026-05-20T01:03:18+00:00",
+      "last_returncode": 2
     }
   }
 }

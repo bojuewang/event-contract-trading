@@ -1,0 +1,10 @@
+# 11_real_data_keys_and_ingestion 真实数据源密钥与实时写入验证
+# started_at=2026-05-20T01:03:18+00:00
+
+[11] 真实数据源接入检查
+[ERROR] ODDS_API_KEY 未配置，Phase 11 不能使用 dry-run 通过。
+[11] 请编辑 .env，设置真实 ODDS_API_KEY 后重跑：
+     python3 phase_runner.py run 11_real_data_keys_and_ingestion --rerun
+ODDS_API_KEY is not configured. Wrote missing-key report.
+
+# finished_at=2026-05-20T01:03:18+00:00 returncode=2 elapsed_seconds=0.46

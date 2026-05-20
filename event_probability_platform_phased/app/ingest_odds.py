@@ -10,6 +10,15 @@ from odds_math import decimal_to_probability, american_to_probability, normalize
 from storage import make_engine, write_ticks
 
 
+def _parse_iso_datetime(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
 def _price_to_raw_prob(price: float, odds_format: str) -> float:
     if odds_format == "american":
         return american_to_probability(price)
@@ -49,7 +58,7 @@ def transform_odds_response(events: list[dict[str, Any]], odds_format: str = "de
                         "event_id": event_id,
                         "market": market_key,
                         "outcome": outcome.get("name", "unknown"),
-                        "source_ts": source_ts,
+                        "source_ts": _parse_iso_datetime(source_ts),
                         "price": outcome.get("price"),
                         "raw_prob": raw_prob if raw_prob == raw_prob else None,
                         "fair_prob": fair_prob,

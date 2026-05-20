@@ -64,5 +64,11 @@
     "name": "生产化就绪检查报告",
     "script": "scripts/phases/10_readiness_report.sh",
     "description": "生成 data/reports/readiness_report.md，列出服务状态、数据状态、模型状态、风险开关和下一步。"
+  },
+  {
+    "id": "11_real_data_keys_and_ingestion",
+    "name": "真实数据源密钥与实时写入验证",
+    "script": "scripts/phases/11_real_data_keys_and_ingestion.sh",
+    "description": "要求真实 ODDS_API_KEY，调用 The Odds API 拉取实时赔率，转换 fair probability，并验证写入 event_ticks。"
   }
 ]

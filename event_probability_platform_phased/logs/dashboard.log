@@ -1,8 +1,18 @@
+2026-05-19 20:55:04.975 Uvicorn server started on 0.0.0.0:8501
 
-      👋 [1mWelcome to Streamlit![0m
+  You can now view your Streamlit app in your browser.
 
-      If you'd like to receive helpful onboarding emails, news, offers, promotions,
-      and the occasional swag, please enter your email address below. Otherwise,
-      leave this field blank.
+  Local URL: http://localhost:8501
+  Network URL: http://172.20.61.59:8501
+  External URL: http://108.50.253.209:8501
 
-      [34mEmail: [0m2026-05-19 20:53:33.200 
+2026-05-19 20:57:15.461 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-05-19 20:57:44.396 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.

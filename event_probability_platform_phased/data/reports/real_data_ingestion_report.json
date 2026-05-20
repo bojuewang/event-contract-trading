@@ -1,0 +1,6 @@
+{
+  "status": "blocked_missing_odds_api_key",
+  "generated_at": "2026-05-20T01:03:18+00:00",
+  "required_env": "ODDS_API_KEY",
+  "next_step": "Edit .env and set ODDS_API_KEY to a real The Odds API key, then rerun Phase 11."
+}
