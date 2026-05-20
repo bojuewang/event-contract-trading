@@ -1,0 +1,145 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-20T01:33:03+00:00",
+  "thresholds": {
+    "max_tick_age_seconds": 30.0,
+    "max_signal_age_seconds": 20.0
+  },
+  "database": {
+    "tick_count": 4830,
+    "unique_events": 2,
+    "unique_sources": 9,
+    "latest_ingested_at": "2026-05-20T01:32:59.552046+00:00",
+    "latest_tick_age_seconds": 3.969817
+  },
+  "signals": {
+    "exists": true,
+    "path": "data/reports/live_hedge_signals.json",
+    "generated_at": "2026-05-20T01:33:00+00:00",
+    "report_age_seconds": 3.522062,
+    "status": "ok",
+    "events_seen": 2,
+    "signals_count": 4,
+    "paper_trade_candidates": 2,
+    "max_signal_tick_age_seconds": 0.599646
+  },
+  "alerts": {
+    "exists": true,
+    "path": "data/alerts/hedge_signal_alerts.jsonl",
+    "line_count": 2,
+    "latest_alert_at": "2026-05-20T01:26:50+00:00",
+    "latest_alert_age_seconds": 373.522482
+  },
+  "workers": [
+    {
+      "name": "api",
+      "pid_file": "pids/api.pid",
+      "pid": 9934,
+      "running": true
+    },
+    {
+      "name": "dashboard",
+      "pid_file": "pids/dashboard.pid",
+      "pid": 9975,
+      "running": true
+    },
+    {
+      "name": "ingest_odds",
+      "pid_file": "pids/ingest_odds.pid",
+      "pid": 8988,
+      "running": true
+    },
+    {
+      "name": "live_signal_monitor",
+      "pid_file": "pids/live_signal_monitor.pid",
+      "pid": 9497,
+      "running": true
+    }
+  ],
+  "services": [
+    {
+      "name": "api_health",
+      "url": "http://127.0.0.1:8000/health",
+      "reachable": true,
+      "status_code": 200
+    },
+    {
+      "name": "dashboard",
+      "url": "http://127.0.0.1:8501",
+      "reachable": true,
+      "status_code": 200
+    }
+  ],
+  "checks": [
+    {
+      "name": "worker_api",
+      "ok": true,
+      "severity": "warn",
+      "detail": "{\"name\": \"api\", \"pid_file\": \"pids/api.pid\", \"pid\": 9934, \"running\": true}"
+    },
+    {
+      "name": "worker_dashboard",
+      "ok": true,
+      "severity": "warn",
+      "detail": "{\"name\": \"dashboard\", \"pid_file\": \"pids/dashboard.pid\", \"pid\": 9975, \"running\": true}"
+    },
+    {
+      "name": "worker_ingest_odds",
+      "ok": true,
+      "severity": "block",
+      "detail": "{\"name\": \"ingest_odds\", \"pid_file\": \"pids/ingest_odds.pid\", \"pid\": 8988, \"running\": true}"
+    },
+    {
+      "name": "worker_live_signal_monitor",
+      "ok": true,
+      "severity": "block",
+      "detail": "{\"name\": \"live_signal_monitor\", \"pid_file\": \"pids/live_signal_monitor.pid\", \"pid\": 9497, \"running\": true}"
+    },
+    {
+      "name": "service_api_health",
+      "ok": true,
+      "severity": "warn",
+      "detail": "{\"name\": \"api_health\", \"url\": \"http://127.0.0.1:8000/health\", \"reachable\": true, \"status_code\": 200}"
+    },
+    {
+      "name": "service_dashboard",
+      "ok": true,
+      "severity": "warn",
+      "detail": "{\"name\": \"dashboard\", \"url\": \"http://127.0.0.1:8501\", \"reachable\": true, \"status_code\": 200}"
+    },
+    {
+      "name": "event_ticks_non_empty",
+      "ok": true,
+      "severity": "block",
+      "detail": "tick_count=4830"
+    },
+    {
+      "name": "event_ticks_fresh",
+      "ok": true,
+      "severity": "block",
+      "detail": "latest_tick_age_seconds=3.969817"
+    },
+    {
+      "name": "signals_file_exists",
+      "ok": true,
+      "severity": "block",
+      "detail": "{\"exists\": true, \"path\": \"data/reports/live_hedge_signals.json\", \"generated_at\": \"2026-05-20T01:33:00+00:00\", \"report_age_seconds\": 3.522062, \"status\": \"ok\", \"events_seen\": 2, \"signals_count\": 4, \"paper_trade_candidates\": 2, \"max_signal_tick_age_seconds\": 0.599646}"
+    },
+    {
+      "name": "signals_report_fresh",
+      "ok": true,
+      "severity": "block",
+      "detail": "report_age_seconds=3.522062"
+    },
+    {
+      "name": "signals_have_rows",
+      "ok": true,
+      "severity": "warn",
+      "detail": "signals_count=4"
+    }
+  ],
+  "blocked_checks": [],
+  "warning_checks": [],
+  "mode": "paper_trade_only",
+  "auto_trading_enabled": false
+}

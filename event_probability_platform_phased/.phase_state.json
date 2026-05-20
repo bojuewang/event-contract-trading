@@ -192,6 +192,18 @@
       "last_returncode": 0,
       "confirmed_at": "2026-05-20T01:31:25+00:00",
       "confirmed_token": "CONFIRM-15_api_dashboard_signal_integration-993adfc8"
+    },
+    "16_realtime_risk_guardrails": {
+      "status": "confirmed",
+      "name": "实时风控状态与安全门",
+      "last_started_at": "2026-05-20T01:33:03+00:00",
+      "last_log": "logs/16_realtime_risk_guardrails.20260519_213303.log",
+      "confirmation_token": "CONFIRM-16_realtime_risk_guardrails-4a16e242",
+      "last_error": null,
+      "last_finished_at": "2026-05-20T01:33:08+00:00",
+      "last_returncode": 0,
+      "confirmed_at": "2026-05-20T01:34:13+00:00",
+      "confirmed_token": "CONFIRM-16_realtime_risk_guardrails-4a16e242"
     }
   }
 }
